@@ -17,7 +17,7 @@ logsh "【Tools】" "请按任意键安装工具箱(Ctrl + C 退出)."
 read answer
 #check root
 # [ "$USER" != "root" ] && logsh "【Tools】"  "请使用root用户安装工具箱！" && exit 1
-mburl="${MB_URL:-https://g.monlor.com/https://raw.githubusercontent.com/monlor/mbfiles/master}"
+mburl="${MB_URL:-https://ghproxy.monlor.workers.dev/https://raw.githubusercontent.com/monlor/mbfiles/master}"
 mbtmp="/tmp/mbtmp"
 [ ! -d "${mbtmp}" ] && mkdir -p ${mbtmp}
 model=$(uname -ms | tr ' ' '_' | tr '[A-Z]' '[a-z]')
