@@ -48,6 +48,8 @@ fi
 
 logsh "【Tools】" "下载工具箱文件..."
 rm -rf ${mbtmp}/mixbox.tar.gz > /dev/null 2>&1
+
+echo ${mbtmp}/mixbox.tar.gz ${mburl}/appstore/mixbox_${model}.tar.gz
 if command -v curl &> /dev/null; then
 	result=$(curl -w %{http_code} -skLo ${mbtmp}/mixbox.tar.gz ${mburl}/appstore/mixbox_${model}.tar.gz)
 else
